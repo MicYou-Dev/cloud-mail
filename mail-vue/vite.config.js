@@ -7,6 +7,7 @@ import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 import {VitePWA} from 'vite-plugin-pwa';
 
 export default defineConfig(({mode}) => {
+    base: '/mail/',
     const env = loadEnv(mode, process.cwd(), 'VITE')
     return {
         server: {
