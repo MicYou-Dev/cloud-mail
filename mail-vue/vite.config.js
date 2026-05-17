@@ -7,7 +7,6 @@ import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 import {VitePWA} from 'vite-plugin-pwa';
 
 export default defineConfig(({mode}) => {
-    base: '/mail/',
     const env = loadEnv(mode, process.cwd(), 'VITE')
     return {
         server: {
@@ -15,7 +14,7 @@ export default defineConfig(({mode}) => {
             port: 3001,
             hmr: true,
         },
-        base: env.VITE_STATIC_URL || '/',
+        base: `/mail/`,
         plugins: [vue(),
             VitePWA({
                 injectRegister: 'script-defer',
